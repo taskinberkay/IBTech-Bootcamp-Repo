@@ -1,0 +1,19 @@
+Single-Responsibility principle(encapsulation)
+- Her class ve fonksiyonun sadece bir görevi gerçekleştirecek şekilde çalışmalıdır ve 
+bu görev ile alakalı metod ve değişkenleri bulundurmalıdır. Komplex görevler
+gerçekleştirilirken bu iş basit parçalara ayrılmış bir çok class ve metodun
+bir arada çalışması ile gerçekleştirilir.
+
+- Bu sayede bir classın değiştirilmesi için olabilecek tek sebebin o classın üstlenmiş
+olduğu tek görevde bir değişiklik yapılmasının istenmesidir.
+
+Open-Closed Principle(abstraction, polymorphism)
+-Program parçacıkları genişlemeye açık ancak kendi içlerinde değişime kapalı olmalıdırlar.
+-Alan örneği
+
+Liskov substitution principle(abstraction, polymorphism)
+-Bütün subclasslar base class'ın tüm özelliklerini taşımalı ve replaceable olmalıdır.
+
+Interface Segregation
+-
+
