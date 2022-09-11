@@ -13,7 +13,7 @@ import org.xml.sax.SAXException;
 
 public class XMLBuildList {
 	public static void main(String[] args) throws Exception, SAXException, IOException {
-		String path = "C:\\Users\\taski\\OneDrive\\Belgeler\\Bootcamp\\IBTech-Bootcamp-Repo\\XML\\Exam.xml";
+		String path = "..\\..\\XML\\Exam.xml";
 		Document document = parse(path);
 		Element exam = document.getDocumentElement();
 		String id = getAttribute(exam, "id", "0");

@@ -10,12 +10,11 @@ import static com.godoro.xml.XMLUtils.*;
 public class XmlBuild {
 	public static void main(String[] args) throws Exception {
 		//JAXP
-		String path = "C:\\Users\\taski\\OneDrive\\Belgeler\\Bootcamp\\IBTech-Bootcamp-Repo\\XML\\Product.xml";
+		String path = "..\\..\\XML\\Product.xml";
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		Document document = builder.parse(path);
 		//DOM
-		System.out.println(document);
 		Element product = document.getDocumentElement();
 		String id = product.getAttribute("id");
 		System.out.println("Özdeşlik: " + id);

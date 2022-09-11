@@ -26,7 +26,7 @@ public class XMLUtils {
 		return document;
 	}
 	public static Document create() {
-		
+		return null;
 	}
 	public static void addSingleElement(Document document, Element parent, String tag, String content) {
 		Element name = document.createElement(tag);
