@@ -6,9 +6,8 @@ import java.io.IOException;
 
 public class ReaderTest {
 	public static void main(String[] args) throws IOException {
-		String path = "C:\\Users\\BERKAY\\OneDrive\\Belgeler\\Bootcamp\\IO\\in.txt";
+		String path = "..\\..\\IO\\in.txt";
 		BufferedReader br = new BufferedReader(new FileReader(path));
-		String text = "";
 		String line;
 		StringBuilder builder = new StringBuilder();
 		while( (line = br.readLine()) != null) {

@@ -1,0 +1,2 @@
+module Homework02 {
+}

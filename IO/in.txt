@@ -1,4 +1,4 @@
-A
-B
-cD
-FG
+SPring Boot
+Jakarta EE
+ORM & JPA
+MVC & JSF

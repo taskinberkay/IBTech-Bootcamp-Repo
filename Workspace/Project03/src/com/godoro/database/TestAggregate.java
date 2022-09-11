@@ -15,18 +15,12 @@ public class TestAggregate {
 		Class.forName(driver);
 
 		Connection connection = DriverManager.getConnection(url, user, password);
-		String sql = "select * from Product where productId = ?";
+		String sql = "select avg(salePrice) as averagePrice from Product";
 		PreparedStatement statement = connection.prepareStatement(sql);
-		statement.setLong(1, 3);
 		ResultSet resultSet = statement.executeQuery();
 		if(resultSet.next()) {
-			long productId = resultSet.getLong("productId");
-			String productName = resultSet.getString("productName");
-			long salePrice = resultSet.getLong("salePrice");
-			System.out.println(
-					productId + " " +
-					productName + " " +
-					salePrice);
+			double averagePrice = resultSet.getDouble("averagePrice");
+			System.out.println("Ortalama eder: " + averagePrice);
 		}
 		connection.close();
 

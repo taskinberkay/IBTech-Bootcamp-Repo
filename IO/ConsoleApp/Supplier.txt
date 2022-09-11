@@ -1,0 +1,4 @@
+602;Cem Kara;6543.0
+603;Cem Karaca;6542.0
+601;Cem_Kör;5000.0
+604;Ali_Osman;7000.0

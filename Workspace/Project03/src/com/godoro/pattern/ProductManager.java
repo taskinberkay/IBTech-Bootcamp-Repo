@@ -86,23 +86,17 @@ public class ProductManager {
 
 	}
 	
-	public Product filter(long productId) throws Exception {
+	public List<Product> filter(double salePriceMin) throws Exception {
 		Product product = null;
 		Class.forName(driver);
 		Connection connection = DriverManager.getConnection(url, user, password);
-		String sql = "select * from Product where productid = ?";
+		String sql = "select * from Product where saleprice >= ?";
 		PreparedStatement statement = connection.prepareStatement(sql);
-		statement.setLong(1, productId);
+		statement.setDouble(1, salePriceMin);
 		ResultSet resultSet = statement.executeQuery();
-		if (resultSet.next()) {
-			String productName = resultSet.getString("productName");
-			double salePrice = resultSet.getDouble("salePrice");
-			product = new Product(productId, productName, salePrice);
-			connection.close();
-			return product;
-		}
+		List<Product> productList = parseList(resultSet);
 		connection.close();
-		return product;
+		return productList;
 
 	}
 	

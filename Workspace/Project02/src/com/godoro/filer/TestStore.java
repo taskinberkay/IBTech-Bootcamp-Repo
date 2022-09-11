@@ -8,14 +8,12 @@ public class TestStore {
 		try {
 			List<Supplier> supplierList = new ArrayList<>();
 			supplierList.add(new Supplier(601, "Cem Kar", 6540));
-			supplierList.add(new Supplier(602, "Cem Kara", 6541));
+			supplierList.add(new Supplier(602, "Cem Kara", 6543));
 			supplierList.add(new Supplier(603, "Cem Karaca", 6542));
-			
-			String filePath = "C:\\Users\\BERKAY\\OneDrive\\Belgeler\\Bootcamp\\IO\\Supplier.txt";
+			String filePath = "..\\..\\IO\\Supplier.txt";
 			SupplierFiler supplierFiler = new SupplierFiler(filePath);
 			supplierFiler.store(supplierList, filePath);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
