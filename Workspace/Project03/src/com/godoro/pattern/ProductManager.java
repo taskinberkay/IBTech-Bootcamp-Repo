@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductManager {
-	String url = "jdbc:postgresql://localhost/dbgodoro";
+	String url = "jdbc:postgresql://localhost:5432/dbgodoro";
 	String user = "postgres";
 	String password = "7534286";
 	String driver = "org.postgresql.Driver";

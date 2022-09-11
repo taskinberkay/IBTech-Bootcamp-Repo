@@ -4,7 +4,7 @@
 if (request.getParameter("submit") != null) {
 	String username = request.getParameter("username").trim();
 	String password = request.getParameter("password").trim();
-	if (username == "godoro" && password == "java") {
+	if (username.equals("godoro") && password.equals("java")) {
 		session.setAttribute("username", request.getParameter("username"));
 		pageContext.forward("Home.jsp");
 	}
