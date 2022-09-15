@@ -5,22 +5,22 @@ import static com.godoro.xml.XMLUtils.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
-public class XmlBuild {
+public class StudentBuild {
 	public static void main(String[] args) throws Exception {
 		
 		//JAXP
-		String path = "..\\..\\XML\\Product.xml";
+		String path = "..\\..\\XML\\Student.xml";
 		Document document = parse(path);
 		
 		//DOM
-		Element product = document.getDocumentElement();
-		long id = getAttribute(product, "id", 0);
+		Element student = document.getDocumentElement();
+		long id = getAttribute(student, "id", 0);
 		System.out.println("Özdeşlik: " + id);
 		
-		String name = getSingleElementText(product, "name", "");
+		String name = getSingleElementText(student, "name", "");
 		System.out.println("Ad: " +name);
-		double price = getSingleElementText(product, "price", 0);
-		System.out.println("Eder: " + price);
+		double price = getSingleElementText(student, "mark", 0);
+		System.out.println("Not: " + price);
 		
 		
 	}
