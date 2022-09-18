@@ -17,9 +17,9 @@ public class XmlBuild {
 		long id = getAttribute(product, "id", 0);
 		System.out.println("Özdeşlik: " + id);
 		
-		String name = getSingleElementText(product, "name", "");
+		String name = getSingleElement(product, "name", "");
 		System.out.println("Ad: " +name);
-		double price = getSingleElementText(product, "price", 0);
+		double price = getSingleElement(product, "price", 0);
 		System.out.println("Eder: " + price);
 		
 		

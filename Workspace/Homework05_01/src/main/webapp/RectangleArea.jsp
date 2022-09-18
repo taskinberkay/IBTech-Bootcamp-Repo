@@ -19,7 +19,7 @@ if (request.getParameter("area") != null) {
 <title>Rectangle Area</title>
 </head>
 <body>
-	<form action="RectangleArea.jsp" method="post">
+	<form action="RectangleArea.jsp" method="get">
 		width: <input type="text" name="width" value=<%=rectangle.getWidth()%>><br>
 		<br> height: <input type="text" name="heigth" value=<%=rectangle.getHeight()%> /><br>
 		<input type="submit" value="Hesapla" name="area" />

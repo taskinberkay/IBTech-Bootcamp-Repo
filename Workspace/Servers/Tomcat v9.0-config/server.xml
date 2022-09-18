@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="Project04" path="/Project04" reloadable="true" source="org.eclipse.jst.jee.server:Project04"/><Context docBase="Homework05_01" path="/Homework05_01" reloadable="true" source="org.eclipse.jst.jee.server:Homework05_01"/><Context docBase="Homework05_2_1" path="/Homework05_02" reloadable="true" source="org.eclipse.jst.jee.server:Homework05_2_1"/><Context docBase="Homework05_3" path="/Homework05_3" reloadable="true" source="org.eclipse.jst.jee.server:Homework05_3"/><Context docBase="Homework05_2_2" path="/Homework05_2_2" reloadable="true" source="org.eclipse.jst.jee.server:Homework05_2_2"/></Host>
+      <Context docBase="Project04" path="/Project04" reloadable="true" source="org.eclipse.jst.jee.server:Project04"/><Context docBase="Homework05_01" path="/Homework05_01" reloadable="true" source="org.eclipse.jst.jee.server:Homework05_01"/><Context docBase="Homework05_2_1" path="/Homework05_02" reloadable="true" source="org.eclipse.jst.jee.server:Homework05_2_1"/><Context docBase="Homework05_3" path="/Homework05_3" reloadable="true" source="org.eclipse.jst.jee.server:Homework05_3"/><Context docBase="Homework05_2_2" path="/Homework05_02_2" reloadable="true" source="org.eclipse.jst.jee.server:Homework05_2_2"/><Context docBase="FinalProject" path="/FinalProject" reloadable="true" source="org.eclipse.jst.jee.server:FinalProject"/></Host>
     </Engine>
   </Service>
 </Server>
