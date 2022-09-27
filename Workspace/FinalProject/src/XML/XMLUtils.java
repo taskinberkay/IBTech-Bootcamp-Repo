@@ -3,6 +3,7 @@ package XML;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.StringWriter;
 import java.io.Writer;
@@ -20,6 +21,7 @@ import javax.xml.transform.stream.StreamResult;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
 abstract public class XMLUtils<E> {
@@ -30,6 +32,27 @@ abstract public class XMLUtils<E> {
 			factory = DocumentBuilderFactory.newInstance();
 		}
 		return factory;
+	}
+
+	public static Document parse(InputStream in) {
+		DocumentBuilderFactory factory = null;
+		DocumentBuilder builder = null;
+		Document document = null;
+		try {
+			factory = getFactory();
+			builder = factory.newDocumentBuilder();
+		} catch (ParserConfigurationException e) {
+			e.printStackTrace();
+		}
+
+		try {
+			document = builder.parse(new InputSource(in));
+		} catch (SAXException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return document;
 	}
 
 	public static Document parse(String path) throws ParserConfigurationException, SAXException, IOException {
@@ -110,5 +133,5 @@ abstract public class XMLUtils<E> {
 		writer.close();
 	}
 
-	public abstract Document format(List<E> e);	
+	public abstract Document format(List<E> e);
 }

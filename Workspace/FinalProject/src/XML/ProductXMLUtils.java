@@ -6,6 +6,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 import composition.entities.Product;
 
@@ -32,4 +33,10 @@ public class ProductXMLUtils extends XMLUtils<Product> {
 		return document;
 	}
 
+	public NodeList getProductList(Document document) {
+		Element products = document.getDocumentElement();
+		NodeList productList = products.getElementsByTagName("product");
+		return productList;
+		
+	}
 }

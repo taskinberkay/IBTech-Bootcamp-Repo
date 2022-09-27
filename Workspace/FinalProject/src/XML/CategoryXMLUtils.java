@@ -6,6 +6,7 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
 
 import composition.entities.Category;
 
@@ -26,6 +27,12 @@ public class CategoryXMLUtils extends XMLUtils<Category> {
 		}
 
 		return document;
+	}
+	public NodeList getCategoryList(Document document) {
+		Element categories = document.getDocumentElement();
+		NodeList productList = categories.getElementsByTagName("category");
+		return productList;
+		
 	}
 
 }

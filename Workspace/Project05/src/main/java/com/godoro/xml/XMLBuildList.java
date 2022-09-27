@@ -22,9 +22,9 @@ public class XMLBuildList {
 		NodeList questions = exam.getElementsByTagName("question");
 		for(int i = 0; i < questions.getLength(); i++) {
 			Element question = (Element)questions.item(i);
-			String number = getSingleElement(question, "number", "");
+			String number = question.getAttribute("number");
 			String text = getSingleElement(question, "text", "");
-			System.out.println(number + ". " + text);
+			System.out.println(number + "." + text);
 			NodeList optionsList = question.getElementsByTagName("option");
 			for(int j = 0; j < optionsList.getLength(); j++) {
 				Element option = (Element)optionsList.item(j);
